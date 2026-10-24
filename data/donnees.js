@@ -12,25 +12,25 @@ window.RRC = {
 
   club: {
     creation: "2024",
-    statut: "",                // ex. : "Association loi 1901" ou "Groupe informel"
-    cout: "",                  // ex. : "Gratuit" ou "Cotisation de 20 € par an"
-    licence: "",               // ex. : "Pas de licence obligatoire pour les sorties du club"
+    statut: "Groupe informel",                // ex. : "Association loi 1901" ou "Groupe informel"
+    cout: "Gratuit",                  // ex. : "Gratuit" ou "Cotisation de 20 € par an"
+    licence: "Pas de licence obligatoire pour les sorties du club",               // ex. : "Pas de licence obligatoire pour les sorties du club"
 
     // Mentions légales (page Contact) : à compléter avant la mise en ligne
-    editeur: "",               // nom officiel du club
-    responsable: "",           // nom de la personne responsable de la publication
-    adresse: "",               // adresse postale ou de la mairie de domiciliation
+    editeur: "Regripp'Run",               // nom officiel du club
+    responsable: "Thomas DAUCHEL",           // nom de la personne responsable de la publication
+    adresse: "La Regrippière, Loire-Atlantique, France",               // adresse postale ou de la mairie de domiciliation
 
-    whatsapp: "",              // lien d'invitation du groupe WhatsApp
-    email: "",
+    whatsapp: "https://chat.whatsapp.com/BF3AoqiXDaWIoE2smRpgUr",              // lien d'invitation du groupe WhatsApp
+    email: "regripprun@gmail.com",
     facebook: "",
     instagram: "",
 
     sorties: {
-      quand: "",               // ex. : "Le samedi à 9h"
-      ou: "",                  // ex. : "Parking de la salle des fêtes"
+      quand: "Le samedi à 9h",               // ex. : "Le samedi à 9h"
+      ou: "Parking de la place St Jo'",                  // ex. : "Parking de la salle des fêtes"
       formats: "Marche, course à pied et trail, avec un ou plusieurs groupes de niveau",
-      decouverte: ""           // ex. : "Samedi 14 novembre, 9h, boucle de 6 km"
+      decouverte: "Samedi 14 novembre, 9h, boucle de 6 km"           // ex. : "Samedi 14 novembre, 9h, boucle de 6 km"
     }
   },
 
