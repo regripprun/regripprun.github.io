@@ -4,20 +4,7 @@
 (function () {
   "use strict";
 
-  var DONNEES = window.RRC || { club: {}, parcours: [], courses: [{ date: "2026-11-07", nom: "Diva’Trail Nocturne", lieu: "La Varenne, Orée-d’Anjou (49)", distances: "10, 15 et 20 km, nocturne, sans classement", lien: "https://www.timepulse.fr/evenements/voir/3297/diva-trail-nocturne-la-varenne" },
-    { date: "2026-11-08", nom: "Musca’Day Trail", lieu: "Saint-Fiacre-sur-Maine (44)", distances: "10 km et 23 km", lien: "https://espace-competition.com/index.php?module=inscription&comp=3232" },
-    { date: "2026-11-08", nom: "Trail de l’Hyrome", lieu: "Chemillé-en-Anjou (49)", distances: "plusieurs distances, jusqu’à 44 km" },
-    { date: "2026-11-21", fin: "2026-11-22", nom: "Trail de la Côte de Jade", lieu: "Saint-Michel-Chef-Chef (44)", distances: "10, 14 et 24 km" },
-    { date: "~2026-11-28", nom: "La Crapahute au clair de lune", lieu: "Martigné-Briand (49)", distances: "9 et 18 km" },
-    { date: "2026-12-05", nom: "Course Nocturne Bouguenais", lieu: "Bouguenais (44)", distances: "12 et 18 km" },
-    { date: "~2026-12-06", nom: "Trail de la Source", lieu: "Beaupréau-en-Mauges (49)", distances: "10, 16 et 20 km" },
-    { date: "2026-12", nom: "Trail du Téléthon", lieu: "Château-Thébaud (44)", distances: "9, 13 et 20 km, non chronométré, au profit de l’AFM Téléthon" },
-    { date: "2027-02", nom: "Val’escapades", lieu: "Vallet (44)", distances: "10,1 et 20 km" },
-    { date: "2027-04", nom: "Sentiers des vignes", lieu: "Saint-Julien-de-Concelles (44)", distances: "11, 21 et 32 km" },
-    { date: "2027-04-10", fin: "2027-04-11", nom: "Trail du vignoble nantais", lieu: "Vertou (44)", distances: "de 12 à 75 km" },
-    { date: "2027-05", nom: "Folies du vignobles", lieu: "Vallet (44)", distances: "5, 12 et 22 km, marche ou trail" },
-    { date: "2027-06", nom: "Les côteaux de la Logne", lieu: "Corcoué-sur-Logne (44)", distances: "3, 4, 13 et 24 km" }
-  ] };
+  var DONNEES = window.RRC || { club: {}, parcours: [], courses: [] };
   var CLUB = DONNEES.club || {};
   var SORTIES = CLUB.sorties || {};
 
