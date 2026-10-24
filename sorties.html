@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sorties & parcours | Regripp’Run</title>
+<meta name="description" content="Les sorties de Regripp’Run à La Regrippière : horaires, lieux de rendez-vous, formats marche, course et trail, et parcours de 5 à 25 km.">
+<meta name="theme-color" content="#546217">
+<meta property="og:title" content="Sorties & parcours | Regripp’Run">
+<meta property="og:description" content="Les sorties de Regripp’Run à La Regrippière : horaires, lieux de rendez-vous, formats marche, course et trail, et parcours de 5 à 25 km.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo-800.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="assets/fonts/lilita-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header class="entete">
+  <div class="conteneur entete-ligne">
+    <a class="marque" href="index.html">
+      <img src="assets/logo-160.png" width="60" height="60" alt="Logo Regripp’Run Club 2024">
+      <span>Regripp’Run</span>
+    </a>
+    <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav class="menu" id="menu-principal" aria-label="Navigation principale">
+      <a href="le-club.html">Le club</a>
+      <a href="sorties.html" aria-current="page">Sorties &amp; parcours</a>
+      <a href="courses.html">Courses &amp; agenda</a>
+      <a href="contact.html">Contact</a>
+      <a class="bouton" href="contact.html#rejoindre" data-lien="whatsapp" data-externe>Rejoindre le groupe</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <section class="page-titre">
+    <div class="conteneur">
+      <h1>Sorties &amp; parcours</h1>
+      <p class="chapeau">On part ensemble, on s’adapte au rythme de chacun, on finit souvent par un café.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="titre-sorties">
+    <div class="conteneur">
+      <h2 class="section-titre" id="titre-sorties">Nos sorties</h2>
+      <p class="section-intro">Marche, course ou trail : choisissez le groupe qui vous correspond le jour même.</p>
+      <div class="deux-colonnes">
+        <div class="infos">
+          <div class="info"><span class="info-nom">Quand</span><span class="info-valeur" data-club="sorties.quand" data-vide="Jour et horaire à préciser bientôt">…</span></div>
+          <div class="info"><span class="info-nom">Où</span><span class="info-valeur" data-club="sorties.ou" data-vide="Lieu de rendez-vous à préciser bientôt">…</span></div>
+          <div class="info"><span class="info-nom">Formats</span><span class="info-valeur" data-club="sorties.formats">…</span></div>
+          <div class="info info-fort">
+            <span class="info-nom">Sortie découverte</span>
+            <span class="info-valeur"><span data-club="sorties.decouverte" data-vide="Une sortie mixte pour accueillir les nouveaux, date à venir.">…</span></span>
+          </div>
+        </div>
+        <div class="photo-vide" role="img" aria-label="Emplacement réservé à une photo du groupe en sortie">Photo du groupe en sortie à venir</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sauge" id="parcours" aria-labelledby="titre-parcours">
+    <div class="conteneur">
+      <h2 class="section-titre" id="titre-parcours">Parcours autour de La Regrippière</h2>
+      <p class="section-intro">Trois longueurs pour trois envies, tous au départ de la commune ou tout près.</p>
+      <div class="parcours">
+        <article class="parcours-carte" data-parcours="moins-5">
+          <span class="parcours-badge">Moins de 5 km</span>
+          <div class="parcours-contenu"></div>
+        </article>
+        <article class="parcours-carte" data-parcours="5-15">
+          <span class="parcours-badge">5 à 15 km</span>
+          <div class="parcours-contenu"></div>
+        </article>
+        <article class="parcours-carte" data-parcours="15-25">
+          <span class="parcours-badge">15 à 25 km</span>
+          <div class="parcours-contenu"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-olive" aria-labelledby="titre-cta">
+    <div class="conteneur">
+      <h2 class="section-titre" id="titre-cta">Envie de nous rejoindre ?</h2>
+      <p class="section-intro">Rejoignez le groupe WhatsApp, présentez-vous en un message et venez à la prochaine sortie.</p>
+      <a class="bouton bouton-clair bouton-ombre" href="contact.html#rejoindre" data-lien="whatsapp" data-externe>Rejoindre le groupe WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <img src="assets/logo-160.png" width="88" height="88" alt="">
+      <span>Regripp’Run</span>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul class="pied-liens">
+        <li data-masquable><a href="contact.html" data-lien="email" data-garder-texte>Écrire au club</a></li>
+        <li data-masquable><a href="#" data-lien="facebook" data-externe>Facebook</a></li>
+        <li data-masquable><a href="#" data-lien="instagram" data-externe>Instagram</a></li>
+        <li><a href="contact.html">Toutes les façons de nous joindre</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Infos</h2>
+      <ul class="pied-liens">
+        <li><a href="contact.html#mentions">Mentions légales</a></li>
+        <li><a href="contact.html#confidentialite">Confidentialité</a></li>
+        <li>© <span id="annee">2026</span> Regripp’Run</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="data/donnees.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

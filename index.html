@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regripp’Run, club de marche, course et trail à La Regrippière</title>
+<meta name="description" content="Regripp’Run est le club de marche, course à pied et trail de La Regrippière et des environs (44 et 49). Tous niveaux, bonne humeur garantie. Rejoignez le groupe.">
+<meta name="theme-color" content="#546217">
+<meta property="og:title" content="Regripp’Run, marcher, courir, partager">
+<meta property="og:description" content="Le club de marche, course à pied et trail de La Regrippière et des environs. Tous niveaux.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo-800.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="assets/fonts/lilita-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header class="entete">
+  <div class="conteneur entete-ligne">
+    <a class="marque" href="index.html">
+      <img src="assets/logo-160.png" width="60" height="60" alt="Logo Regripp’Run Club 2024">
+      <span>Regripp’Run</span>
+    </a>
+    <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav class="menu" id="menu-principal" aria-label="Navigation principale">
+      <a href="le-club.html">Le club</a>
+      <a href="sorties.html">Sorties &amp; parcours</a>
+      <a href="courses.html">Courses &amp; agenda</a>
+      <a href="contact.html">Contact</a>
+      <a class="bouton" href="contact.html#rejoindre" data-lien="whatsapp" data-externe>Rejoindre le groupe</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <section class="hero">
+    <div class="conteneur hero-grille">
+      <div class="hero-texte">
+        <p class="pastille">Club de La Regrippière, depuis <span data-club="creation">2024</span></p>
+        <h1>Marcher,<br>courir,<br>partager.</h1>
+        <p class="chapeau">Le club de marche, course à pied et trail de La Regrippière et des environs. Tous niveaux, bonne humeur garantie.</p>
+        <div class="groupe-boutons">
+          <a class="bouton bouton-ombre" href="contact.html#rejoindre" data-lien="whatsapp" data-externe>Rejoindre le groupe WhatsApp</a>
+          <a class="bouton bouton-contour" href="sorties.html">Voir les prochaines sorties</a>
+        </div>
+      </div>
+      <div class="hero-visuel">
+        <img class="hero-logo" src="assets/logo-800.png" width="480" height="480" alt="Logo du club : une mascotte rieuse qui court, entourée du nom Regripp’Run, Club 2024">
+        <div class="autocollant" aria-hidden="true">Tous<br>niveaux</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-bottom: 96px" aria-labelledby="titre-meteo">
+    <div class="conteneur">
+      <div class="meteo" id="meteo" aria-busy="true">
+        <div class="meteo-actuel">
+          <h2 class="meteo-titre" id="titre-meteo">La météo à La Regrippière</h2>
+          <p class="meteo-temp" id="meteo-temp" aria-live="polite">…</p>
+          <p class="meteo-detail" id="meteo-detail">Chargement de la météo</p>
+        </div>
+        <div class="meteo-jours" id="meteo-jours"></div>
+        <p class="meteo-credit">Prévisions : <a href="https://open-meteo.com/" rel="noopener">Open-Meteo.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0" aria-labelledby="titre-atouts">
+    <div class="conteneur">
+      <h2 class="section-titre" id="titre-atouts">Un club à notre rythme</h2>
+      <p class="section-intro">On part ensemble, on s’adapte au rythme de chacun, on finit souvent par un café.</p>
+      <div class="cartes">
+        <article class="carte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.5c3 0 6 1.5 6 5.5"/></svg>
+          <h3>Pour tous les niveaux</h3>
+          <p>Marcheurs, coureurs débutants ou confirmés : chacun trouve son groupe et son rythme.</p>
+        </article>
+        <article class="carte carte-sauge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-6"/><path d="M12 15c-4 0-6-2.5-6-5.5 0-2 1.2-3.2 2.5-3.8C9 3.5 10.3 2 12 2s3 1.5 3.5 3.7C16.8 6.3 18 7.5 18 9.5c0 3-2 5.5-6 5.5z"/></svg>
+          <h3>Dans nos paysages</h3>
+          <p>Les sentiers autour de La Regrippière, de Vallet et du vignoble nantais.</p>
+        </article>
+        <article class="carte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg>
+          <h3>Un groupe qui vit</h3>
+          <p>Sorties, météo du week-end, idées de parcours et courses à venir : tout circule sur WhatsApp.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sauge" aria-labelledby="titre-sortie">
+    <div class="conteneur deux-colonnes">
+      <div>
+        <h2 class="section-titre" id="titre-sortie">Prochaines sorties</h2>
+        <p class="section-intro" style="margin-bottom: 32px">Venez essayer, sans inscription et sans niveau minimum.</p>
+        <a class="bouton bouton-ombre" href="sorties.html">Toutes les infos sur les sorties</a>
+      </div>
+      <div class="infos">
+        <div class="info"><span class="info-nom">Quand</span><span class="info-valeur" data-club="sorties.quand" data-vide="Jour et horaire à préciser bientôt">…</span></div>
+        <div class="info"><span class="info-nom">Où</span><span class="info-valeur" data-club="sorties.ou" data-vide="Lieu de rendez-vous à préciser bientôt">…</span></div>
+        <div class="info"><span class="info-nom">Formats</span><span class="info-valeur" data-club="sorties.formats">…</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-olive" aria-labelledby="titre-rejoindre">
+    <div class="conteneur">
+      <h2 class="section-titre" id="titre-rejoindre">Rejoindre le club, c’est simple</h2>
+      <p class="section-intro">Pas d’inscription compliquée, pas de niveau minimum.</p>
+      <ol class="etapes">
+        <li class="etape"><div class="etape-numero" aria-hidden="true">1</div><h3>Rejoignez le groupe</h3><p>Un clic sur le lien WhatsApp.</p></li>
+        <li class="etape"><div class="etape-numero" aria-hidden="true">2</div><h3>Présentez-vous</h3><p>Un petit message, et tout le monde vous accueille.</p></li>
+        <li class="etape"><div class="etape-numero" aria-hidden="true">3</div><h3>Venez à la prochaine sortie</h3><p>Chaussures, eau, bonne humeur.</p></li>
+      </ol>
+      <a class="bouton bouton-clair bouton-ombre" href="contact.html#rejoindre" data-lien="whatsapp" data-externe>Rejoindre le groupe WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <img src="assets/logo-160.png" width="88" height="88" alt="">
+      <span>Regripp’Run</span>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul class="pied-liens">
+        <li data-masquable><a href="contact.html" data-lien="email" data-garder-texte>Écrire au club</a></li>
+        <li data-masquable><a href="#" data-lien="facebook" data-externe>Facebook</a></li>
+        <li data-masquable><a href="#" data-lien="instagram" data-externe>Instagram</a></li>
+        <li><a href="contact.html">Toutes les façons de nous joindre</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Infos</h2>
+      <ul class="pied-liens">
+        <li><a href="contact.html#mentions">Mentions légales</a></li>
+        <li><a href="contact.html#confidentialite">Confidentialité</a></li>
+        <li>© <span id="annee">2026</span> Regripp’Run</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="data/donnees.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

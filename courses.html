@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Courses & agenda | Regripp’Run</title>
+<meta name="description" content="Les prochains trails et courses à pied en Loire-Atlantique (44) et Maine-et-Loire (49), sélectionnés par le club Regripp’Run.">
+<meta name="theme-color" content="#546217">
+<meta property="og:title" content="Courses & agenda | Regripp’Run">
+<meta property="og:description" content="Les prochains trails et courses à pied en Loire-Atlantique (44) et Maine-et-Loire (49), sélectionnés par le club Regripp’Run.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo-800.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="assets/fonts/lilita-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header class="entete">
+  <div class="conteneur entete-ligne">
+    <a class="marque" href="index.html">
+      <img src="assets/logo-160.png" width="60" height="60" alt="Logo Regripp’Run Club 2024">
+      <span>Regripp’Run</span>
+    </a>
+    <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav class="menu" id="menu-principal" aria-label="Navigation principale">
+      <a href="le-club.html">Le club</a>
+      <a href="sorties.html">Sorties &amp; parcours</a>
+      <a href="courses.html" aria-current="page">Courses &amp; agenda</a>
+      <a href="contact.html">Contact</a>
+      <a class="bouton" href="contact.html#rejoindre" data-lien="whatsapp" data-externe>Rejoindre le groupe</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <section class="page-titre">
+    <div class="conteneur">
+      <h1>Courses &amp; agenda</h1>
+      <p class="chapeau">Les trails et courses à venir en Loire-Atlantique et en Maine-et-Loire.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="titre-courses">
+    <div class="conteneur">
+      <h2 class="section-titre" id="titre-courses">Les prochaines courses de la région</h2>
+      <p class="section-intro">Une course vous tente ? Dites-le sur le groupe : on s’y retrouve souvent à plusieurs.</p>
+      <div class="courses" id="liste-courses" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="section section-olive" aria-labelledby="titre-cta">
+    <div class="conteneur">
+      <h2 class="section-titre" id="titre-cta">Envie de nous rejoindre ?</h2>
+      <p class="section-intro">Rejoignez le groupe WhatsApp, présentez-vous en un message et venez à la prochaine sortie.</p>
+      <a class="bouton bouton-clair bouton-ombre" href="contact.html#rejoindre" data-lien="whatsapp" data-externe>Rejoindre le groupe WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <img src="assets/logo-160.png" width="88" height="88" alt="">
+      <span>Regripp’Run</span>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul class="pied-liens">
+        <li data-masquable><a href="contact.html" data-lien="email" data-garder-texte>Écrire au club</a></li>
+        <li data-masquable><a href="#" data-lien="facebook" data-externe>Facebook</a></li>
+        <li data-masquable><a href="#" data-lien="instagram" data-externe>Instagram</a></li>
+        <li><a href="contact.html">Toutes les façons de nous joindre</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Infos</h2>
+      <ul class="pied-liens">
+        <li><a href="contact.html#mentions">Mentions légales</a></li>
+        <li><a href="contact.html#confidentialite">Confidentialité</a></li>
+        <li>© <span id="annee">2026</span> Regripp’Run</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="data/donnees.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
