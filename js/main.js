@@ -125,10 +125,41 @@
 
   var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 
-  function formaterDate(iso) {
-    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || "");
-    if (!m) return iso || "Date à confirmer";
-    return parseInt(m[3], 10) + " " + MOIS[parseInt(m[2], 10) - 1];
+  /* Une date peut s'écrire de trois façons dans data/donnees.js :
+       "2026-11-28"   date exacte        -> "28 novembre"
+       "~2026-11-28"  date approximative -> "Vers le 28 novembre"
+       "2027-02"      mois seulement     -> "Février 2027"
+     Un champ "fin" facultatif ("2026-11-22") ajoute une deuxième journée. */
+  function analyserDate(valeur) {
+    var v = String(valeur || "").trim();
+    var m;
+    if ((m = /^~(\d{4})-(\d{2})-(\d{2})$/.exec(v))) return { type: "environ", a: +m[1], m: +m[2], j: +m[3], tri: m[1] + "-" + m[2] + "-" + m[3] };
+    if ((m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v))) return { type: "jour", a: +m[1], m: +m[2], j: +m[3], tri: v };
+    if ((m = /^(\d{4})-(\d{2})$/.exec(v))) return { type: "mois", a: +m[1], m: +m[2], j: 0, tri: v + "-99" };
+    return { type: "inconnu", a: 0, m: 0, j: 0, tri: "9999" };
+  }
+
+  function majuscule(t) { return t.charAt(0).toUpperCase() + t.slice(1); }
+
+  function formaterDate(course) {
+    var d = analyserDate(course.date);
+    if (d.type === "mois") return majuscule(MOIS[d.m - 1] + " " + d.a);
+    if (d.type === "inconnu") return "Date à confirmer";
+    var texte = d.j + " " + MOIS[d.m - 1];
+    var f = analyserDate(course.fin);
+    if (d.type === "jour" && f.type === "jour" && f.tri > d.tri) {
+      texte = f.m === d.m ? d.j + " au " + f.j + " " + MOIS[d.m - 1] : d.j + " " + MOIS[d.m - 1] + " au " + f.j + " " + MOIS[f.m - 1];
+    }
+    return d.type === "environ" ? "Vers le " + texte : texte;
+  }
+
+  function encoreAVenir(course, aujourdhui) {
+    var d = analyserDate(course.date);
+    if (d.type === "inconnu") return true;
+    if (d.type === "mois") return d.tri.slice(0, 7) >= aujourdhui.slice(0, 7);
+    var f = analyserDate(course.fin);
+    var derniere = f.type === "jour" && f.tri > d.tri ? f.tri : d.tri;
+    return derniere >= aujourdhui;
   }
 
   function initCourses() {
@@ -136,8 +167,8 @@
     if (!zone) return;
     var aujourdhui = new Date().toISOString().slice(0, 10);
     var liste = (DONNEES.courses || [])
-      .filter(function (c) { return !c.date || c.date >= aujourdhui; })
-      .sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); });
+      .filter(function (c) { return encoreAVenir(c, aujourdhui); })
+      .sort(function (a, b) { return analyserDate(a.date).tri.localeCompare(analyserDate(b.date).tri); });
 
     zone.textContent = "";
     if (!liste.length) {
@@ -147,9 +178,13 @@
       zone.appendChild(vide);
       return;
     }
+
+    var incertaines = false;
     liste.forEach(function (c) {
+      var type = analyserDate(c.date).type;
+      if (type !== "jour") incertaines = true;
       var ligne = creer("div", "course");
-      ligne.appendChild(creer("span", "course-date", formaterDate(c.date)));
+      ligne.appendChild(creer("span", "course-date", formaterDate(c)));
       var corps = creer("div", "course-corps");
       corps.appendChild(creer("p", "course-nom", c.nom || "Course"));
       var detail = [c.lieu, c.distances].filter(Boolean).join(" · ");
@@ -164,6 +199,13 @@
       }
       zone.appendChild(ligne);
     });
+
+    if (incertaines) {
+      var note = creer("p", "", "« Vers le » ou un mois seul : l’organisateur n’a pas encore confirmé la date exacte. Vérifiez-la avant de vous inscrire.");
+      note.style.fontSize = "0.95rem";
+      note.style.margin = "20px 0 0";
+      zone.appendChild(note);
+    }
   }
 
   /* ---------- Météo (Open-Meteo, sans clé, sans cookie) ---------- */
